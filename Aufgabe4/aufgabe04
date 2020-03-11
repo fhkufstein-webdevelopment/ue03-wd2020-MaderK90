@@ -4,8 +4,31 @@
 @import "compass/css3";
 
 
+
+//a:
+
+@mixin margin{
+  /* Content wird später definiert */
+  @content;
+
+}
+//b:
+/*Mixin breakpoint anlegen*/
+@mixin breakpoint{
+  @media (min-width: 990px) {
+    /* Content wird später definiert */
+    @content;
+  }
+}
 .margin{
   @include margin(5px);
   @include margin(5px 10px); @include margin(5px 8px 10px); @include margin(5px 8px 10px 14px);
 
 }
+
+//b:
+.mobileInvisible { display:none;
+  @include breakpoint(990px) {
+    display: block; }
+}
+
