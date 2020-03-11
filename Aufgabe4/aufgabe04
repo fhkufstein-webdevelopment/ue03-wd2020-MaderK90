@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import "compass/reset";
+//sollte diese folgende Zeile
+@import "compass/css3";
+
+
+.margin{
+  @include margin(5px);
+  @include margin(5px 10px); @include margin(5px 8px 10px); @include margin(5px 8px 10px 14px);
+
+}
